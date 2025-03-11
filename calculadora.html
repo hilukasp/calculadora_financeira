@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora.css"> 
+</head>
+<body>
+    <header>
+        <h1>Agrotech</h1>
+    </header>
+     
+    <main>
+        <h1>Agrotech: Calculadora financeira.</h1>
+    <h2>Simule o quanto vai ganhar ou perder com sua safra de soja!</h2>
+    
+        <div class="labelinput">
+            <label for="ipt_quantidade">Insira a quantidade de soja de sua safra:</label>
+            <input type="number" id="ipt_quantidade" placeholder="-- Kg"> 
+        </div>
+
+        <div class="labelinput">
+            <label for="ipt_venda">Insira o preço que irá vender a saca:</label>
+            <input type="number" id="ipt_venda" placeholder="-- R$">
+        </div>
+
+        <div class="labelinput">
+            <label for="ipt_temperatura">Insira a temperatura média do silo que armazena a sua safra de soja:</label>
+            <input type="number" id="ipt_temperatura" placeholder="-- °C"> 
+        </div>
+
+        <div class="labelinput">
+            
+        </div>
+
+
+
+    <label for="ipt_umidade">Insira a umidade relativa do silo que armazena a sua safra de soja:</label>
+    <input type="number" id="ipt_umidade" placeholder="-- %"> 
+
+    <button onclick="calcular()">Calcular</button> 
+
+    <div id="div_resultado"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+<script>
+    
+     
+    function calculo() { 
+
+        peso=Number(iptpeso.value) 
+        preco=Number(iptpreco.value)
+        
+         
+        
+        console.log(peso)
+        perdido=Number(peso*(1/5))
+        sacaperdida=Number(perdido/60)
+        custo=Number(perdido*preco)
+        
+
+
+        resultado.innerHTML=`  
+        <h3>Quilos perdidos: ${perdido}kg  </h3>
+        <h3>Sacas desperdiçadas: ${(sacaperdida.toFixed(2))}</h3>
+        <h3 class="prejuizo">Com nosso projeto você aumentará seu lucro: ${custo}R$</h3> 
+        `
+    }
+
+</script>
+</html>
